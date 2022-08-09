@@ -16,9 +16,20 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   const code = makeCode(5)
   const url = req.body.url
-  Url.create({ code, url })
-    .then(() => res.render('done', { code }))
-    .catch(error => console.log(error))
+  Url.findOne({ url })
+    .lean()
+    .then(website => {
+      if (!website) {
+        return Url.create({ code, url })
+          .then(() => res.render('done', { code }))
+          .catch(error => console.log(error))
+      }
+      res.render('done', { code: website.code })
+      
+    }
+
+    )
+
 })
 
 app.get('/:code', (req, res) => {
