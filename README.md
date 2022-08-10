@@ -21,7 +21,7 @@
 
 6. 若看見此行訊息則代表順利運行， `express iapp is listening on 3000`
 
-7. 接下來就可以打開瀏覽器進入以下網址 [http://localhost:3000]http://localhost:3000 開始使用囉！
+7. 接下來就可以打開瀏覽器進入以下網址 http://localhost:3000 開始使用囉！
 
 8. 若欲暫停使用，按下 ctrl + c 即可
 
