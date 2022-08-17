@@ -1,13 +1,27 @@
-<label for="url">Your short URL is:</label>
-<div class="input-group mt-4">
-  <input id="url" name="url" type="url" class="form-control" placeholder=" http://localhost:3000/{{ code }}" 
-  value= "http://localhost:3000/{{ code }}">
-  <button class="btn btn-outline-success" type="button" onclick="copy()">copy</button>
+<div class="col-md-8 d-flex flex-column justify-content-evenly">
+  {{!-- <div class="card-body mt-4 ms-4"> --}}
+    <label class='fs-4' for="url">Your short URL is :</label>
+
+    <div class="mt-2 d-flex">
+      <a href="/{{ code }}" class="w-75">
+        <input id="url" name="url" type="url" class="form-control bg-success bg-opacity-25 text-decoration-underline text-primary" value="http://localhost:3000/{{ code }}">
+      </a>
+
+      <button class="btn btn-success m-auto" type="button" onclick="copy()">copy</button>
+    </div>
+
+    <a href="/"><button type="button" class="btn btn-dark mt-3 px-2 ">One More
+      </button></a>
+  </div>
+
+  <div class="card-footer mt-3">
+    <p class="text-center text-muted m-2">Below is your original website : <br> {{ url }}
+    </p>
+  </div>
+</div>
 </div>
 
 
-<a href="/"><button type="button" class="btn btn-dark mt-3 p-1">One More
-</button></a>
 
 <script>
   const copy = () => {
@@ -16,3 +30,10 @@
     alert('Copied!')
   }
 </script>
+
+
+<style>
+  #url:hover {
+    cursor: pointer;
+  }
+</style>

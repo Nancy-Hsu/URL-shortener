@@ -5,7 +5,7 @@ const makeCode = require('../../makeCode.js')
 
 router.post('/', (req, res) => {
   const url = req.body.url
-  
+
   /// / check if url is repeated
   Url.findOne({ url })
     .then(data => {
@@ -15,7 +15,7 @@ router.post('/', (req, res) => {
       }
       return data
     })
-    .then(data => res.render('done', { code: data.code }))
+    .then(data => res.render('done', { url, code: data.code }))
     .catch(error => console.log(error))
 })
 
