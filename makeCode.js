@@ -1,4 +1,4 @@
-function makeCode(number) {
+function makeCode (number) {
   const lowerCaseLetters = 'abcdefghijklmnopqrstuvwxyz'
   const upperCaseLetters = lowerCaseLetters.toUpperCase()
   const numbers = '1234567890'
