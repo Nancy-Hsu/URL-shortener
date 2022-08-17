@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Url = require('../../models/url')
+const makeCode = require('../../makeCode.js')
 
 router.post('/', (req, res) => {
   const code = makeCode(5)
@@ -26,16 +27,6 @@ router.post('/', (req, res) => {
     }).catch(error => console.log(error))
 })
 
-function makeCode (number) {
-  const lowerCaseLetters = 'abcdefghijklmnopqrstuvwxyz'
-  const upperCaseLetters = lowerCaseLetters.toUpperCase()
-  const numbers = '1234567890'
-  const collection = (lowerCaseLetters + upperCaseLetters + numbers).split('')
-  let code = ''
-  for (let i = 0; i < number; i++) {
-    code += collection[Math.floor(Math.random() * collection.length)]
-  }
-  return code
-}
+
 
 module.exports = router
