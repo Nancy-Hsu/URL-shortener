@@ -3,9 +3,10 @@
 - 輸入你的網址按下 shorten
 - 一鍵複製產出的短網址
 - 貼在各個地方都可以用
-<img width="584" alt="2-3 8 10" src="https://user-images.githubusercontent.com/108853120/183852064-8e35857f-0aeb-43c1-b6e0-222058c1e1a0.png">
-
 <br />
+<img width="647" alt="2-3 A11-2" src="https://user-images.githubusercontent.com/108853120/185084281-e434470d-f56f-46ad-ae46-ae3c663227b3.png">
+
+
 
 ## 安裝流程
 
