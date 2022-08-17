@@ -10,8 +10,8 @@ router.get('/', (req, res) => {
 router.get('/:code', (req, res) => {
   const { code } = req.params
   Url.findOne({ code })
-    .lean()
-    .then(website => res.redirect(`${website.url}`))
+    .then(data => 
+      !data ? res.send(`errorMsg: Can't found the URL`) : res.redirect(`${data.url}`))
     .catch(error => console.log(error))
 })
 
